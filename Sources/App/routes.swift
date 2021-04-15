@@ -9,6 +9,11 @@ func routes(_ app: Application) throws {
     app.get("hello") { req -> String in
         return "Hello, world!"
     }
-
+    
+    app.get("metrics") { req -> String in
+        return "SXMetrics works"
+    }
+    
     try app.register(collection: TodoController())
+    try app.register(collection: MetricsController())
 }
