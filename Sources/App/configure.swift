@@ -16,7 +16,7 @@ public func configure(_ app: Application) throws {
     ), as: .psql)
 
     app.migrations.add(CreateMetric())
-    app.logger.logLevel = .debug
+//    app.logger.logLevel = .debug
     try app.autoMigrate().wait()
 
     // register routes
